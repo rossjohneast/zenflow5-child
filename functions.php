@@ -10,7 +10,7 @@ add_action( 'wp_enqueue_scripts', 'fse_child_styles' );
 // function child_enqueue_styles() {
 
 // 	// dequeue the Twenty Twenty-One parent style
-// 	wp_dequeue_style( 'tzze_style_bs_gen' );
+// 	wp_dequeue_style( 'zenflow5_style_bs_gen' );
     
 // 	// Theme stylesheet
 // 	//wp_enqueue_style( 'child-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version') );
