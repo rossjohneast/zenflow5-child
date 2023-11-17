@@ -1,0 +1,100 @@
+/*
+Theme Name: ThemeZen Editor Child
+Template: zeneditor
+Theme URI: https://theme-zen.com/
+Author: ThemeZen
+Author URI: https://theme-zen.com/
+Description: Make custom changes for your website in this child theme.
+Requires at least: 6.1
+Tested up to: 6.2
+Requires PHP: 5.6
+Version: 1.0.0
+License: ThemeZen Licence
+License URI: 
+Text Domain: tzze
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, accessibility-ready, blog, portfolio, news
+*/
+
+/* Development CSS code can be added here for testing */
+
+/* *{
+    border: 1px solid red;
+} */
+
+/* Header and nav */
+body.home header.wp-block-template-part {
+    transition: all 0.5s ease;
+}
+
+header.wp-block-template-part,
+body.home header.wp-block-template-part.section-header-nav-sticky {
+    background-color: #323643;
+}
+
+.nav-link,
+.nav-link:hover,
+.nav-link:focus {
+    color: #fff;
+}
+
+.display-1,
+.is-style-display-1,
+.display-2,
+.is-style-display-2,
+.display-3,
+.is-style-display-3,
+.display-4,
+.is-style-display-4 {
+    font-weight:400;
+}
+
+.btn {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    padding: 13px 29px;
+    line-height: 17px;
+    font-size: 14px;
+}
+
+footer > section.bg-primary .btn-primary {
+    border-color: #ffffff!important;
+    border-width: 2px;
+} 
+
+
+@media (min-width: 992px) {
+
+    /* Header and nav */
+    body.home header.wp-block-template-part {
+        background-color: transparent;
+    }
+}
+
+/* Header and nav */
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    
+ }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    
+ }
