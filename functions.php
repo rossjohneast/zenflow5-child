@@ -21,7 +21,7 @@ add_action( 'wp_enqueue_scripts', 'fse_child_styles' );
 
 function enqueue_customizer_scssphp_styles() {
 	//A custom generated SCSSPHP style sheet, this files exists & is written to by customizer
-	wp_enqueue_style( 'wp-zeneditorchild-bs-theme-options', get_stylesheet_directory_uri() . '/options-generated-bootstrap-stylesheet.css' );
+	wp_enqueue_style( 'wp-zenflow-child-bs-theme-options', get_stylesheet_directory_uri() . '/options-generated-bootstrap-stylesheet.css' );
  }
  
  //Import parent style sheets
