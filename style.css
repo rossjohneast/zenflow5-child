@@ -26,16 +26,42 @@ body.home header.wp-block-template-part {
     transition: all 0.5s ease;
 }
 
+body.home header.wp-block-template-part {
+    box-shadow:none;
+}
+
 header.wp-block-template-part,
 body.home header.wp-block-template-part.section-header-nav-sticky {
-    background-color: #323643;
+    background-color: #fff;
+    box-shadow:none;
+    box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.09);
+}
+
+header .custom-logo-link {
+    transition: all 0.3s ease-in-out;
+    max-width: 100%;
+}
+
+header .custom-logo-link,
+header.section-header-nav-sticky .custom-logo-link {
+    max-width:  60px;
+}
+
+header.section-header-nav-sticky .custom-logo-link {
+    max-width:  50%;
+    transition: all 0.3s ease-in-out;
+}
+
+header.wp-block-template-part.section-header-nav-sticky {
+    box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.09);
 }
 
 .nav-link,
 .nav-link:hover,
 .nav-link:focus {
-    color: #fff;
+    color: #000;
 }
+
 
 .display-1,
 .is-style-display-1,
@@ -62,17 +88,73 @@ footer > section.bg-primary .btn-primary {
     border-width: 2px;
 } 
 
+.custom-header-style {
+    padding: 0 0 0 2rem;
+    position: relative;
+}
 
-@media (min-width: 992px) {
+.custom-header-style:before {
+    content: '';
+    width: 4px;
+    height: calc(100% - 20px);
+    background-color: #f90706;
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 0;
+}
 
-    /* Header and nav */
-    body.home header.wp-block-template-part {
-        background-color: transparent;
-    }
+.entry-content ul {
+    list-style: none; /* Remove default bullets */
+}
+
+.entry-content ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #f90706; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1.1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1.1em; /* Also needed for space (tweak if needed) */
+}
+
+/* .carousel-control-next-icon rect {
+    fill: red;
+  } */
+
+.carousel-dark  .carousel-control-prev-icon,
+.carousel-dark  .carousel-control-next-icon {
+    filter: none!important;
+    fill: #f90706; /* Replace with your desired color code */
+    background-color: #f90706;
+    background-size: 50%;
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+
+    background-color: #f90706;
+}
+
+.footer-logo {
+    width: 300px;
+}
+
+.card-title a {
+    text-decoration: none;
+}
+
+.card-footer {
+    background-color: #fff;
+}
+
+.row-categories-blog .btn{
+    padding: 6px 15px;
+}
+
+.is-style-lead {
+    line-height: 2rem;
 }
 
 /* Header and nav */
-
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
@@ -86,7 +168,24 @@ footer > section.bg-primary .btn-primary {
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .home header:not(.section-header-nav-sticky) .nav-link,
+    .home header:not(.section-header-nav-sticky) .nav-link:hover,
+    .home header:not(.section-header-nav-sticky) .nav-link:focus {
+        color: #fff;
+    }
 
+    /* Header and nav */
+    body.home header.wp-block-template-part {
+        background-color: transparent;
+    }
+
+    header .custom-logo-link {
+        max-width:100%;
+    }
+
+    header.section-header-nav-sticky .custom-logo-link {
+        max-width:  80%;
+    }
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
@@ -97,4 +196,5 @@ footer > section.bg-primary .btn-primary {
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) { 
     
- }
+}
+
