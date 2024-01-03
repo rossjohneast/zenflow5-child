@@ -84,19 +84,6 @@ GLOB - Typography
 /*--------------------------------------------------------------
 GLOB - UL
 --------------------------------------------------------------*/
-/* Colour for content bullets */
-.entry-content ul {
-    list-style: none; /* Remove default bullets */
-}
-
-.entry-content ul li::before {
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: #f90706; /* Change the color */
-    font-weight: bold; /* If you want it to be bold */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 1.1em; /* Also needed for space (tweak if needed) */
-    margin-left: -1.1em; /* Also needed for space (tweak if needed) */
-}
 
 /*--------------------------------------------------------------
 GLOB - Links
