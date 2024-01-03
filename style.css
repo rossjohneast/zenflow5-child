@@ -156,10 +156,31 @@ footer > section.bg-primary .btn-primary {
 
 /* Header and nav */
 
+body.home .carousel-item .zenflow5-section {
+    height: 600px!important;
+}
+
+@media (min-width: 992px) {
+    body.home .carousel-item .zenflow5-section {
+        height: 700px!important;
+    }
+}
+
+@media (min-width: 1200px) {
+    body.home .carousel-item .zenflow5-section {
+        height: 800px!important;
+    }
+}
+
+body.home .carousel-item .zenflow5-section .container,
+body.home .carousel-item .zenflow5-section .container .row {
+    height: 100%;
+}
+
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
     
- }
+}
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
