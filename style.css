@@ -16,53 +16,39 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 */
 
 /* Development CSS code can be added here for testing */
-
 /* *{
     border: 1px solid red;
 } */
 
-/* Header and nav */
-body.home header.wp-block-template-part {
-    transition: all 0.5s ease;
-}
+/*-------------------------------------------------------------
+Globals (GLOB)
+    GLOB - Typography
+    GLOB - Forms
+    GLOB - UL
+    GLOB - Links
+    GLOB - Buttons
+Header (HEAD)
+    HEAD - Layout
+    HEAD - Logo
+	HEAD - Navigation
+    HEAD - Links
+Hero (HERO)
+	HERO - Layout
+Carousel (CARO)
+	CARO - Layout
+Footer (FOOT)
+    FOOT - Layout
+Posts (POST)
+    POST - Buttons
+Components (COMP)
+    COMP - Cards
+Bootstrap (BOOT)
+	BOOT - Breakpoints Examples
+--------------------------------------------------------------*/
 
-body.home header.wp-block-template-part {
-    box-shadow:none;
-}
-
-header.wp-block-template-part,
-body.home header.wp-block-template-part.section-header-nav-sticky {
-    background-color: #fff;
-    box-shadow:none;
-    box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.09);
-}
-
-header .custom-logo-link {
-    transition: all 0.3s ease-in-out;
-    max-width: 100%;
-}
-
-header .custom-logo-link,
-header.section-header-nav-sticky .custom-logo-link {
-    max-width:  60px;
-}
-
-header.section-header-nav-sticky .custom-logo-link {
-    max-width:  50%;
-    transition: all 0.3s ease-in-out;
-}
-
-header.wp-block-template-part.section-header-nav-sticky {
-    box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.09);
-}
-
-.nav-link,
-.nav-link:hover,
-.nav-link:focus {
-    color: #000;
-}
-
-
+/*--------------------------------------------------------------
+GLOB - Typography
+--------------------------------------------------------------*/
 .display-1,
 .is-style-display-1,
 .display-2,
@@ -74,20 +60,11 @@ header.wp-block-template-part.section-header-nav-sticky {
     font-weight:400;
 }
 
-.btn {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 400;
-    padding: 13px 29px;
-    line-height: 17px;
-    font-size: 14px;
+.is-style-lead {
+    line-height: 2rem;
 }
 
-footer > section.bg-primary .btn-primary {
-    border-color: #ffffff!important;
-    border-width: 2px;
-} 
-
+/* Adds a line before the CTA headers */
 .custom-header-style {
     padding: 0 0 0 2rem;
     position: relative;
@@ -104,6 +81,10 @@ footer > section.bg-primary .btn-primary {
     left: 0;
 }
 
+/*--------------------------------------------------------------
+GLOB - UL
+--------------------------------------------------------------*/
+/* Colour for content bullets */
 .entry-content ul {
     list-style: none; /* Remove default bullets */
 }
@@ -117,45 +98,101 @@ footer > section.bg-primary .btn-primary {
     margin-left: -1.1em; /* Also needed for space (tweak if needed) */
 }
 
-/* .carousel-control-next-icon rect {
-    fill: red;
-  } */
+/*--------------------------------------------------------------
+GLOB - Links
+--------------------------------------------------------------*/
 
-.carousel-dark  .carousel-control-prev-icon,
-.carousel-dark  .carousel-control-next-icon {
-    filter: none!important;
-    fill: #f90706; /* Replace with your desired color code */
-    background-color: #f90706;
-    background-size: 50%;
+/*--------------------------------------------------------------
+GLOB - Buttons
+--------------------------------------------------------------*/
+.btn {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    padding: 13px 29px;
+    line-height: 17px;
+    font-size: 14px;
 }
 
-.carousel-dark .carousel-indicators [data-bs-target] {
-
-    background-color: #f90706;
+/*--------------------------------------------------------------
+HEAD - Layout
+--------------------------------------------------------------*/
+body.home header.wp-block-template-part {
+    transition: all 0.5s ease;
 }
 
-.footer-logo {
-    width: 300px;
+body.home header.wp-block-template-part {
+    box-shadow:none;
 }
 
-.card-title a {
-    text-decoration: none;
-}
-
-.card-footer {
+header.wp-block-template-part,
+body.home header.wp-block-template-part.section-header-nav-sticky {
     background-color: #fff;
+    box-shadow:none;
+    box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.09);
 }
 
-.row-categories-blog .btn{
-    padding: 6px 15px;
+header.wp-block-template-part.section-header-nav-sticky {
+    box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.09);
 }
 
-.is-style-lead {
-    line-height: 2rem;
+@media (min-width: 992px) {
+    /* Header bg */
+    body.home header.wp-block-template-part {
+        background-color: transparent;
+    }
 }
 
-/* Header and nav */
+/*--------------------------------------------------------------
+HEAD - Logo
+--------------------------------------------------------------*/
+header .custom-logo-link {
+    transition: all 0.3s ease-in-out;
+    max-width: 100%;
+}
 
+header .custom-logo-link,
+header.section-header-nav-sticky .custom-logo-link {
+    max-width:  60px;
+}
+
+header.section-header-nav-sticky .custom-logo-link {
+    max-width:  50%;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 992px) {
+    header .custom-logo-link {
+        max-width:100%;
+    }
+
+    header.section-header-nav-sticky .custom-logo-link {
+        max-width:  80%;
+    }
+}
+
+/*--------------------------------------------------------------
+HEAD - Links
+--------------------------------------------------------------*/
+.nav-link,
+.nav-link:hover,
+.nav-link:focus {
+    color: #000;
+}
+
+@media (min-width: 992px) {
+    .home header:not(.section-header-nav-sticky) .nav-link,
+    .home header:not(.section-header-nav-sticky) .nav-link:hover,
+    .home header:not(.section-header-nav-sticky) .nav-link:focus {
+        color: #fff;
+    }
+}
+
+/*--------------------------------------------------------------
+HERO - Layout
+--------------------------------------------------------------*/
+
+/* Start: The home page hero carousel item (first) needs fixed heights, based on users content, stops height changing */
 body.home .carousel-item .zenflow5-section {
     height: 600px!important;
 }
@@ -176,46 +213,79 @@ body.home .carousel-item .zenflow5-section .container,
 body.home .carousel-item .zenflow5-section .container .row {
     height: 100%;
 }
+/* End: The home page hero carousel item (first) needs fixed heights, based on users content, stops height changing */
 
-/* // Small devices (landscape phones, 576px and up) */
+/*--------------------------------------------------------------
+CARO - Layout
+--------------------------------------------------------------*/
+.carousel-dark .carousel-control-prev-icon,
+.carousel-dark .carousel-control-next-icon {
+    filter: none !important;
+    fill: #f90706;
+    background-color: #f90706;
+    background-size: 50%;
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: #f90706;
+}
+
+/*--------------------------------------------------------------
+FOOT - Layout
+--------------------------------------------------------------*/
+footer > section.bg-primary .btn-primary {
+    border-color: #ffffff!important;
+    border-width: 2px;
+} 
+
+.footer-logo {
+    width: 300px;
+}
+
+/*--------------------------------------------------------------
+POST - Buttons
+--------------------------------------------------------------*/
+.row-categories-blog .btn{
+    padding: 6px 15px;
+}
+
+/*--------------------------------------------------------------
+COMP - Cards
+--------------------------------------------------------------*/
+.card-title a {
+    text-decoration: none;
+}
+
+.card-footer {
+    background-color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+BOOT - Breakpoints Examples
+--------------------------------------------------------------*/
+
+/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
-    
+
 }
 
-/* // Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-    
- }
 
-/* // Large devices (desktops, 992px and up) */
+}
+
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .home header:not(.section-header-nav-sticky) .nav-link,
-    .home header:not(.section-header-nav-sticky) .nav-link:hover,
-    .home header:not(.section-header-nav-sticky) .nav-link:focus {
-        color: #fff;
-    }
 
-    /* Header and nav */
-    body.home header.wp-block-template-part {
-        background-color: transparent;
-    }
-
-    header .custom-logo-link {
-        max-width:100%;
-    }
-
-    header.section-header-nav-sticky .custom-logo-link {
-        max-width:  80%;
-    }
 }
 
-/* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-    
- }
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {   
 
-/* // XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) { 
-    
 }
 
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {  
+
+}
