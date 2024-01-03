@@ -205,17 +205,6 @@ body.home .carousel-item .zenflow5-section .container .row {
 /*--------------------------------------------------------------
 CARO - Layout
 --------------------------------------------------------------*/
-.carousel-dark .carousel-control-prev-icon,
-.carousel-dark .carousel-control-next-icon {
-    filter: none !important;
-    fill: #f90706;
-    background-color: #f90706;
-    background-size: 50%;
-}
-
-.carousel-dark .carousel-indicators [data-bs-target] {
-    background-color: #f90706;
-}
 
 /*--------------------------------------------------------------
 FOOT - Layout
