@@ -11,13 +11,20 @@ function fse_child_styles() {
 add_action( 'wp_enqueue_scripts', 'fse_child_styles' );
 
 
-
 /**
  * A custom generated SCSSPHP style sheet, this files exists & is written to by customizer
  */
 function enqueue_customizer_scssphp_styles() {
+
+    // Use the parent Themes version for caching
+    $parent_version =  wp_get_theme( 'zenflow5' )->get( 'Version' ); // Specify the parent theme name here
 	
-	wp_enqueue_style( 'wp-zenflow-child-bs-theme-options', get_stylesheet_directory_uri() . '/options-generated-bootstrap-stylesheet.css' );
+	wp_enqueue_style( 
+        'wp-zenflow-child-bs-theme-options', 
+            get_stylesheet_directory_uri() . '/options-generated-bootstrap-stylesheet.css', 
+            array(), 
+            $parent_version 
+        );
 
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_customizer_scssphp_styles', 4);
